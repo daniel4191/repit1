@@ -11,12 +11,12 @@
     <h1>post detail</h1>
     {{post.id}}
     {{post.title}}
-    {% if post.comment_set %}
+    <ul>
         {% for comment in post.comment_set.all %}
             <li>{{comment}}</li>
+        {%empty%}
+            <li>댓글이 아직 없습니다.</li>
         {% endfor %}    
-    {% else %}
-        <li>댓글이 아직 없습니다.</li>
-    {% endif %}
+    </ul>
 </body>
 </html>

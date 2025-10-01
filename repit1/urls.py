@@ -26,7 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", index),
     path("posts/", post_list),
-    path("posts/<int:post_id>/", post_detail),
+    path("posts/<int:post_id>/", post_detail, name="detail"),
     path("posts/add/", post_add)
 ]
 
