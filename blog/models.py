@@ -13,4 +13,4 @@ class Comment(models.Model):
     comment = models.TextField("댓글 내용")
     
     def __str__(self):
-        return self.title
+        return self.comment
